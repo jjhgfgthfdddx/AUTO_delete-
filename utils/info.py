@@ -18,8 +18,8 @@
 
 import os
 
-API_ID = int(environ.get('API_ID', '12618934'))
-API_HASH = environ.get('API_HASH', '49aacd0bc2f8924add29fb02e20c8a16')
+API_ID       = int(os.environ.get("API_ID", "12618934"))
+API_HASH     = os.environ.get("API_HASH", "49aacd0bc2f8924add29fb02e20c8a16")
 BOT_TOKEN    = os.environ.get("BOT_TOKEN", "7587045703:AAGIOLfj4mSe8H1rmyqLWtdrotbpnQHewDY")
 SESSION      = os.environ.get("SESSION", "")
 TIME         = int(os.environ.get("TIME", 10))
