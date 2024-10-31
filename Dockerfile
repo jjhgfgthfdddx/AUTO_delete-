@@ -1,6 +1,11 @@
-FROM python:3.8-slim-buster
+FROM python:3.10.8-slim-buster
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
+
+RUN cd /
+RUN pip install -U pip && pip install -U -r requirements.txt
+WORKDIR /app
 
 COPY . .
-RUN pip3 install -r requirements.txt
-
-CMD ["python3","main.py"]
+CMD ["python", "main.py"]
