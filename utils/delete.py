@@ -24,7 +24,7 @@ async def check_up(bot):
            print(err)
     delete_all_data(all_data)
           
-@Bot.on_message(filters.command('start') & filters.private)
+@bot.on_message(filters.command('start') & filters.private)
 async def start(bot, message):
     await message.reply(START_MSG.format(message.from_user.mention))
           
