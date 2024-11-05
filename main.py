@@ -1,6 +1,5 @@
 from time import time 
 from utils.info import *
-from utils.database import *
 from subprocess import Popen
 from pyrogram import Client, filters
 
