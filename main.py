@@ -9,17 +9,7 @@ User = Client("auto-delete-user",
 
 @User.on_message()
 async def delete(user, message):
-    try:
-       if bool(WHITE_LIST):
-          if message.from_user.id in WHITE_LIST:
-             return 
-       if bool(BLACK_LIST):
-          if message.from_user.id not in BLACK_LIST:
-             return
-       _time = int(time()) + TIME 
-       save_message(message, _time)
-    except Exception as e:
-       print(str(e))
+  await message.delete()
 
 @User.on_message(filters.regex("!start") & filters.private)
 async def start(user, message):
