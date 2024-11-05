@@ -3,4 +3,4 @@ requests
 gunicorn
 pymongo[srv]
 flask[async] 
-pyrotgfork
+git+https://github.com/KurimuzonAkuma/pyrogram
