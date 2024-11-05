@@ -24,9 +24,9 @@ async def check_up(bot):
            print(err)
     delete_all_data(all_data)
           
-@bot.on_message(filters.command('start') & filters.private)
+@bot.on_message(filters.regex("start") & filters.private)
 async def start(bot, message):
-    await message.reply(START_MSG.format(message.from_user.mention))
+    await message.reply("Hi, I'm alive!")
           
 async def run_check_up():
     async with bot:     
