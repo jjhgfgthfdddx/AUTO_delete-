@@ -9,8 +9,6 @@ bot = Client("auto-delete-bot",
           api_hash=API_HASH,
           bot_token=BOT_TOKEN)
 #-------------------------------------------------------------------------------
-START_MSG = "<b>I'm a private bot of @mh_world to delete group messages after a specific time</b>"
-
 async def check_up(bot):   
     _time = int(time()) 
     all_data = get_all_data(_time)
@@ -25,7 +23,7 @@ async def check_up(bot):
     delete_all_data(all_data)
           
 @bot.on_message(filters.regex("start") & filters.private)
-async def start(bot, message):
+async def starts(bot, message):
     await message.reply("Hi, I'm alive!")
           
 async def run_check_up():
